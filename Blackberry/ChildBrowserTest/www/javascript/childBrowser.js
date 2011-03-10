@@ -19,16 +19,11 @@
 (function() {
     var childBrowser = function() {
         return {
-            showWebPage: function(url, successCallback, errorCallback) {
-		try {
+            showWebPage: function(url) {
+
 	    		var args = new blackberry.invoke.BrowserArguments(url);
 	    		blackberry.invoke.invoke(blackberry.invoke.APP_BROWSER, args);
-		}
-		catch(err) {
-			errorCallback(err.description);
-			return;
-		}
-		successCallback();
+
 
 		// no native code needed.
                 //PhoneGap.exec(successCallback, errorCallback, 'childBrowser', 'showWebPage', [ message ]);
