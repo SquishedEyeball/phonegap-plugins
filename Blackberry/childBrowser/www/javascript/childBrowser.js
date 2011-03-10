@@ -17,7 +17,7 @@
  *   );
  */
 (function() {
-    var childBrowser = function(url) {
+    var childBrowser = function() {
         return {
             showWebPage: function(url, successCallback, errorCallback) {
 		try {
