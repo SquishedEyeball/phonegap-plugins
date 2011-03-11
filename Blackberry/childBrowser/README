@@ -25,6 +25,14 @@ function doChildBrowser(url) {
             }
         }
 
+
+See: http://www.blackberry.com/developers/docs/widgetapi/blackberry.invoke.BrowserArguments.html
+
+Also see the test project:
+
+https://github.com/SquishedEyeball/phonegap-plugins/tree/master/Blackberry/ChildBrowserTest
+
+
 This code is completely dependent on the PhoneGap project, also hosted on
 GitHub ( github.com/phonegap/phonegap )
 
