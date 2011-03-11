@@ -1,6 +1,29 @@
-This code is untested and in the process of being constructed!!!!
+Usage:
 
-DO NOT USE.
+Include this in your confg.xml file:
+
+config.xml:
+
+    <feature id="blackberry.invoke" version="1.0.0"/>
+    <feature id="blackberry.invoke.BrowserArguments" version="1.0.0"/>
+    <feature id="blackberry.identity" version="1.0.0"/>
+
+HTML:
+
+<script src="javascript/childBrowser.js" type="text/javascript"></script>
+
+
+Javascript in that html file:
+
+function doChildBrowser(url) {
+            try {
+                
+                window.plugins.childBrowser.showWebPage( url, function () {},function (error) { alert('Error opening child browser:'+error)} );
+            }
+            catch (e) {
+                alert('Error opening child browser: ' + url + ' :' + e);
+            }
+        }
 
 This code is completely dependent on the PhoneGap project, also hosted on
 GitHub ( github.com/phonegap/phonegap )
